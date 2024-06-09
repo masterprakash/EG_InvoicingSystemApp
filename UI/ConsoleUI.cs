@@ -50,7 +50,7 @@ namespace InvoicingSystemApp.UI
                     case "5":
                         return;
                     default:
-                        Console.WriteLine("Invalid choice. Please try again.");
+                        Console.WriteLine("\nInvalid choice. Please try again.\n");
                         break;
                 }
             }
@@ -58,14 +58,15 @@ namespace InvoicingSystemApp.UI
 
         private void DisplayMainMenu()
         {
-            Console.WriteLine("Invoicing System Console Application");
-            Console.WriteLine("-------------------------------------");
-            Console.WriteLine("1. Product Management");
-            Console.WriteLine("2. Category Management");
-            Console.WriteLine("3. Customer Management");
-            Console.WriteLine("4. Invoicing");
-            Console.WriteLine("5. Exit");
-            Console.Write("Please enter your choice: ");
+            Console.WriteLine("\n");
+            Console.WriteLine("     Invoicing System Console Application");
+            Console.WriteLine("     -------------------------------------");
+            Console.WriteLine("     1. Product Management");
+            Console.WriteLine("     2. Category Management");
+            Console.WriteLine("     3. Customer Management");
+            Console.WriteLine("     4. Invoicing");
+            Console.WriteLine("     5. Exit");
+            Console.Write("     Please enter your choice: ");
         }
 
         private void ProductSubMenu()
@@ -94,7 +95,7 @@ namespace InvoicingSystemApp.UI
                     case "6":
                         return;
                     default:
-                        Console.WriteLine("Invalid choice. Please try again.");
+                        Console.WriteLine("\nInvalid choice. Please try again.\n");
                         break;
                 }
             }
@@ -102,15 +103,16 @@ namespace InvoicingSystemApp.UI
 
         private void DisplayProductMenu()
         {
-            Console.WriteLine("Product Management");
-            Console.WriteLine("------------------");
-            Console.WriteLine("1. Add Product");
-            Console.WriteLine("2. Update Product");
-            Console.WriteLine("3. Delete Product");
-            Console.WriteLine("4. Get Product by ID");
-            Console.WriteLine("5. Get All Products");
-            Console.WriteLine("6. Back to Main Menu");
-            Console.Write("Please enter your choice: ");
+            Console.WriteLine("\n");
+            Console.WriteLine("     Product Management");
+            Console.WriteLine("     ------------------");
+            Console.WriteLine("     1. Add Product");
+            Console.WriteLine("     2. Update Product");
+            Console.WriteLine("     3. Delete Product");
+            Console.WriteLine("     4. Get Product by ID");
+            Console.WriteLine("     5. Get All Products");
+            Console.WriteLine("     6. Back to Main Menu");
+            Console.Write("     Please enter your choice: ");
         }
 
         private void AddProduct()
@@ -145,7 +147,7 @@ namespace InvoicingSystemApp.UI
 
         private void UpdateProduct()
         {
-            Console.WriteLine("Enter product ID to update:");
+            Console.WriteLine(" Enter product ID to update:");
             int productId;
             while (true)
             {
@@ -153,32 +155,32 @@ namespace InvoicingSystemApp.UI
                 {
                     break;
                 }
-                Console.WriteLine("Invalid product ID. Please enter a valid positive integer value.");
+                Console.WriteLine(" Invalid product ID. Please enter a valid positive integer value.");
             }
 
-            Console.WriteLine("Enter new product name:");
+            Console.WriteLine(" Enter new product name:");
             string name = Console.ReadLine();
-            Console.WriteLine("Enter new product description:");
+            Console.WriteLine(" Enter new product description:");
             string description = Console.ReadLine();
             decimal price;
             while (true)
             {
-                Console.WriteLine("Enter new product price:");
+                Console.WriteLine(" Enter new product price:");
                 if (decimal.TryParse(Console.ReadLine(), out price) && price > 0)
                 {
                     break;
                 }
-                Console.WriteLine("Invalid price. Please enter a valid positive decimal value.");
+                Console.WriteLine(" Invalid price. Please enter a valid positive decimal value.");
             }
             int categoryId;
             while (true)
             {
-                Console.WriteLine("Enter new product category ID:");
+                Console.WriteLine(" Enter new product category ID:");
                 if (int.TryParse(Console.ReadLine(), out categoryId))
                 {
                     break;
                 }
-                Console.WriteLine("Invalid category ID. Please enter a valid integer value.");
+                Console.WriteLine(" Invalid category ID. Please enter a valid integer value.");
             }
 
             _productController.UpdateProduct(productId, name, description, price, categoryId);
@@ -247,7 +249,7 @@ namespace InvoicingSystemApp.UI
                     case "6":
                         return;
                     default:
-                        Console.WriteLine("Invalid choice. Please try again.");
+                        Console.WriteLine("\nInvalid choice. Please try again.\n");
                         break;
                 }
             }
@@ -255,15 +257,16 @@ namespace InvoicingSystemApp.UI
 
         private void DisplayCategoryMenu()
         {
-            Console.WriteLine("Category Management");
-            Console.WriteLine("-------------------");
-            Console.WriteLine("1. Add Category");
-            Console.WriteLine("2. Update Category");
-            Console.WriteLine("3. Delete Category");
-            Console.WriteLine("4. Get Category by ID");
-            Console.WriteLine("5. Get All Categories");
-            Console.WriteLine("6. Back to Main Menu");
-            Console.Write("Please enter your choice: ");
+            Console.WriteLine("\n");
+            Console.WriteLine("     Category Management");
+            Console.WriteLine("     -------------------");
+            Console.WriteLine("     1. Add Category");
+            Console.WriteLine("     2. Update Category");
+            Console.WriteLine("     3. Delete Category");
+            Console.WriteLine("     4. Get Category by ID");
+            Console.WriteLine("     5. Get All Categories");
+            Console.WriteLine("     6. Back to Main Menu");
+            Console.Write("     Please enter your choice: ");
         }
 
         private void AddCategory()
@@ -354,7 +357,7 @@ namespace InvoicingSystemApp.UI
                     case "6":
                         return;
                     default:
-                        Console.WriteLine("Invalid choice. Please try again.");
+                        Console.WriteLine("\nInvalid choice. Please try again.\n");
                         break;
                 }
             }
@@ -362,15 +365,16 @@ namespace InvoicingSystemApp.UI
 
         private void DisplayCustomerMenu()
         {
-            Console.WriteLine("Customer Management");
-            Console.WriteLine("-------------------");
-            Console.WriteLine("1. Add Customer");
-            Console.WriteLine("2. Update Customer");
-            Console.WriteLine("3. Delete Customer");
-            Console.WriteLine("4. Get Customer by ID");
-            Console.WriteLine("5. Get All Customers");
-            Console.WriteLine("6. Back to Main Menu");
-            Console.Write("Please enter your choice: ");
+            Console.WriteLine("\n");
+            Console.WriteLine("     Customer Management");
+            Console.WriteLine("     -------------------");
+            Console.WriteLine("     1. Add Customer");
+            Console.WriteLine("     2. Update Customer");
+            Console.WriteLine("     3. Delete Customer");
+            Console.WriteLine("     4. Get Customer by ID");
+            Console.WriteLine("     5. Get All Customers");
+            Console.WriteLine("     6. Back to Main Menu");
+            Console.Write("     Please enter your choice: ");
         }
 
         private void AddCustomer()
@@ -471,7 +475,7 @@ namespace InvoicingSystemApp.UI
                     case "6":
                         return;
                     default:
-                        Console.WriteLine("Invalid choice. Please try again.");
+                        Console.WriteLine("\nInvalid choice. Please try again.\n");
                         break;
                 }
             }
@@ -479,15 +483,16 @@ namespace InvoicingSystemApp.UI
 
         private void DisplayInvoicingMenu()
         {
-            Console.WriteLine("Invoicing");
-            Console.WriteLine("---------");
-            Console.WriteLine("1. Add Invoice");
-            Console.WriteLine("2. Update Invoice");
-            Console.WriteLine("3. Delete Invoice");
-            Console.WriteLine("4. Get Invoice by ID");
-            Console.WriteLine("5. Get All Invoices");
-            Console.WriteLine("6. Back to Main Menu");
-            Console.Write("Please enter your choice: ");
+            Console.WriteLine("\n");
+            Console.WriteLine("     Invoicing");
+            Console.WriteLine("     ---------");
+            Console.WriteLine("     1. Add Invoice");
+            Console.WriteLine("     2. Update Invoice");
+            Console.WriteLine("     3. Delete Invoice");
+            Console.WriteLine("     4. Get Invoice by ID");
+            Console.WriteLine("     5. Get All Invoices");
+            Console.WriteLine("     6. Back to Main Menu");
+            Console.Write("     Please enter your choice: ");
         }
 
         private void AddInvoice()
