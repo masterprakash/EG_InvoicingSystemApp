@@ -30,8 +30,8 @@ namespace InvoicingSystemApp.Repositories
 
         public void Update(Product product)
         {
-            //var existingProduct = GetById(product.Id);
-            var existingProduct = _products.FirstOrDefault(p => p.Id == product.Id);
+            var existingProduct = GetById(product.Id);
+            //var existingProduct = _products.FirstOrDefault(p => p.Id == product.Id);
             if (existingProduct != null)
             {
                 existingProduct.Name = product.Name;
